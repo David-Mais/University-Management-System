@@ -64,10 +64,10 @@
 			<td th:text = "${student.phoneNumber}"></td>
 			<td th:text = "${student.gpa}"></td>
 			<td>
-				<a th:href = "@{/students/edit/{id}(id=${student.id})}"
+				<a th:href = "@{/headofdepartment/edit/{id}(id=${student.id})}"
 				   class = "btn btn-primary">Update</a>
 
-				<a th:href = "@{/students/{id}(id=${student.id})}"
+				<a th:href = "@{/headofdepartment/{id}(id=${student.id})}"
 				   class = "btn btn-danger">Delete</a>
 
 			</td>
