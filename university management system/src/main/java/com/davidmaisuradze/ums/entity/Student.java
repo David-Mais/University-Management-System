@@ -2,6 +2,8 @@ package com.davidmaisuradze.ums.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "students")
 public class Student {
@@ -24,6 +26,13 @@ public class Student {
     private String phoneNumber;
     @Column(name = "gpa")
     private String gpa;
+    @ManyToMany
+    @JoinTable(
+            name = "student_subject",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "subject_id")
+    )
+    private List<Subject> subjects;
 
     public String getGpa() {
         return gpa;
