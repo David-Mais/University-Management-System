@@ -18,6 +18,12 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    @GetMapping("/student/{id}")
+    public String showStudentInfo(@PathVariable int id, Model model) {
+        model.addAttribute("student", studentService.getStudentById(id));
+        return "student";
+    }
+
     @GetMapping("/headofdepartment")
     public String listStudents(Model model) {
         model.addAttribute("students", studentService.getAllStudents());

@@ -2,8 +2,6 @@ package com.davidmaisuradze.ums.entity;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "students")
 public class Student {
@@ -24,29 +22,19 @@ public class Student {
     private String email;
     @Column(name = "phoneNumber")
     private String phoneNumber;
+    @Column(name = "homework", columnDefinition = "INT DEFAULT 0")
+    private int homework;
+    @Column(name = "quiz", columnDefinition = "INT DEFAULT 0")
+    private int quiz;
+    @Column(name = "exam", columnDefinition = "INT DEFAULT 0")
+    private int exam;
     @Column(name = "gpa")
     private String gpa;
-    @ManyToMany
-    @JoinTable(
-            name = "student_subject",
-            joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "subject_id")
-    )
-    private List<Subject> subjects;
-
-    public String getGpa() {
-        return gpa;
-    }
-
-    public void setGpa(String gpa) {
-        this.gpa = gpa;
-    }
 
     public Student() {
 
     }
     public Student(String firstName, String lastName, String dateOfBirth, String gender, String address, String email, String phoneNumber, String gpa) {
-        super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -55,6 +43,9 @@ public class Student {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.gpa = gpa;
+        this.homework = 0;
+        this.quiz = 0;
+        this.exam = 0;
     }
 
     public int getId() {
@@ -121,4 +112,35 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(String gpa) {
+        this.gpa = gpa;
+    }
+
+    public int getHomework() {
+        return homework;
+    }
+
+    public void setHomework(int homework) {
+        this.homework = homework;
+    }
+
+    public int getQuiz() {
+        return quiz;
+    }
+
+    public void setQuiz(int quiz) {
+        this.quiz = quiz;
+    }
+
+    public int getExam() {
+        return exam;
+    }
+
+    public void setExam(int exam) {
+        this.exam = exam;
+    }
 }

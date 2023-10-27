@@ -16,12 +16,12 @@ public class UniversityManagementSystemApplication{
 
 //    @Autowired
 //    private StudentRepository studentRepository;
-//
 //    @Override
 //    public void run(String... args) throws Exception {
-//        Student student1 = new Student("Davit", "Maisuradze", "20/09/2004", "Male", "addr", "email", "MyRealPhone", 2.95f);
-//        Student student2 = new Student("Mariam", "Katamashvili", "20/09/2004", "Female", "addr", "email", "MyRealPhone", 3.1f);
-//        Student student3 = new Student("MIkheil", "Chartolani", "20/09/2004", "Male", "addr", "email", "MyRealPhone", 2.6f);
+//        Student student1 = new Student("Davit", "Maisuradze", "20/09/2004", "Male", "addr", "email", "MyRealPhone", "3.0");
+//        Student student2 = new Student("Mariam", "Katamashvili", "20/09/2004", "Female", "addr", "email", "MyRealPhone", "3.5");
+//        Student student3 = new Student("MIkheil", "Chartolani", "20/09/2004", "Male", "addr", "email", "MyRealPhone", "3.6");
+//
 //        studentRepository.save(student1);
 //        studentRepository.save(student2);
 //        studentRepository.save(student3);
