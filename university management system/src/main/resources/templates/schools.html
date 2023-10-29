@@ -18,6 +18,7 @@
     <th>Semesters Needed</th>
     <th>Fee</th>
     <th>Head Of Department</th>
+    <th>Actions</th>
   </tr>
   </thead>
   <tbody>
@@ -27,6 +28,10 @@
     <td th:text="${school.semesters}"></td>
     <td th:text="${school.fee}"></td>
     <td th:text="${school.headOfDepartment.firstName + ' ' + school.headOfDepartment.lastName}"></td>
+    <td>
+      <a th:href = "@{/schools/{id}(id=${school.id})}"
+         class = "btn btn-primary">See Students</a>
+    </td>
   </tr>
   </tbody>
 </table>
