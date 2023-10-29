@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>List Of HoDs</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<h1>List of Heads Of Departments</h1>
+<table class = "table table-striped table-bordered">
+    <thead class = "table-dark">
+    <tr>
+        <th>HoD Id</th>
+        <th>HoD Name</th>
+        <th>HoD LastName</th>
+        <th>HoD school</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="hod : ${hods}">
+        <td th:text="${hod.id}"></td>
+        <td th:text="${hod.firstName}"></td>
+        <td th:text="${hod.lastName}"></td>
+        <td th:text="${hod.school.name}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

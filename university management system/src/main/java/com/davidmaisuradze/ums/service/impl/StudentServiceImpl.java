@@ -38,6 +38,4 @@ public class StudentServiceImpl implements StudentService {
     public void deleteStudentById(int id) {
         studentRepository.deleteById(id);
     }
-
-
 }

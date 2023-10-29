@@ -31,6 +31,9 @@ public class Student {
     @Column(name = "gpa")
     private String gpa;
 
+    @ManyToOne
+    @JoinColumn(name = "school_id")
+    private School school;
     public Student() {
 
     }
@@ -142,5 +145,13 @@ public class Student {
 
     public void setExam(int exam) {
         this.exam = exam;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 }

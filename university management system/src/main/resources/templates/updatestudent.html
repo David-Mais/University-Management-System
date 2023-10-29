@@ -95,6 +95,16 @@
                     placeholder="Enter Student GPA"/>
           </div>
 
+          <div class="form-group">
+            <label>School</label>
+            <select th:field="*{school}">
+              <option th:each="school : ${schools}"
+                      th:value="${school.id}"
+                      th:text="${school.name}">
+              </option>
+            </select>
+          </div>
+
           <div class = "box-footer">
             <button type="submit" class = "btn btn-primary">
               Submit

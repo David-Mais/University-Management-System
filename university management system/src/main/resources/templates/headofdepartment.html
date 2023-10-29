@@ -48,6 +48,7 @@
 			<th> Student Email </th>
 			<th> Student Phone </th>
 			<th> Student GPA </th>
+			<th> Student School</th>
 			<th> Actions </th>
 		</tr>
 		</thead>
@@ -63,6 +64,7 @@
 			<td th:text = "${student.email}"></td>
 			<td th:text = "${student.phoneNumber}"></td>
 			<td th:text = "${student.gpa}"></td>
+			<td th:text = "${student.school.name}"></td>
 			<td>
 				<a th:href = "@{/headofdepartment/edit/{id}(id=${student.id})}"
 				   class = "btn btn-primary">Update</a>
