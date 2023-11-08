@@ -27,15 +27,14 @@
         }
 
         .btn {
-            margin: 10px; /* Spacing between buttons */
-            width: 45%; /* Button width to fit two in a row */
+            margin: 10px;
+            width: 45%;
         }
 
-        /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 600px) {
             .btn {
-                width: 90%; /* Full width on smaller screens */
-                margin: 10px auto; /* Center align on small screens */
+                width: 90%;
+                margin: 10px auto;
             }
         }
     </style>
@@ -53,6 +52,11 @@
         </div>
         <div class="col-12 col-md-6">
             <a th:href="@{/headofdepartments}" class="btn btn-primary">Heads of Departments</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <a th:href="@{/studentselectpage}" class="btn btn-primary">Student Select</a>
         </div>
     </div>
     <div class="row">
